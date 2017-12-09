@@ -287,18 +287,18 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
 
     @Override
     public void onStatusChanged(String s, int i, Bundle bundle) {
-        Toast.makeText(getActivity(), "O status do Provider foi alterado", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(), "O status do Provider foi alterado", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onProviderEnabled(String s) {
-        Toast.makeText(getActivity(), "Provider Habilitado", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(), "Provider Habilitado", Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
     public void onProviderDisabled(String s) {
-        Toast.makeText(getActivity(), "Provider Desabilitado", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(), "Provider Desabilitado", Toast.LENGTH_SHORT).show();
 
     }
 

@@ -95,7 +95,7 @@ public class EventTransitionFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
 
         @Override

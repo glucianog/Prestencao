@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity
         // INITIALIZE FIREBASE DB
        FirebaseDatabase db = FirebaseDatabase.getInstance();
        DatabaseReference databaseReference = db.getReference();
-       databaseReference.child("Evento").addValueEventListener(new ValueEventListener() {
+       databaseReference.child("Ocorrencia").addValueEventListener(new ValueEventListener() {
            @Override
            public void onDataChange(DataSnapshot dataSnapshot) {
                Iterable<DataSnapshot> children = dataSnapshot.getChildren();

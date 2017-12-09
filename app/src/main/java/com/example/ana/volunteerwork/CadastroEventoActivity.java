@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class CadastroEventoActivity extends AppCompatActivity {
@@ -27,14 +28,8 @@ public class CadastroEventoActivity extends AppCompatActivity {
     EditText nomeEventoET;
     EditText desEventoET;
     EditText endEventoET;
-    EditText datIniET;
-    EditText datFimET;
-    EditText horaIniET;
-    EditText horaFimET;
 
     Calendar nCurrentDate = Calendar.getInstance();
-
-    int  year, month, day, hour, minute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,49 +45,11 @@ public class CadastroEventoActivity extends AppCompatActivity {
         nomeEventoET = (EditText) findViewById(R.id.nomeEvento);
         desEventoET = (EditText) findViewById(R.id.desEvento);
         endEventoET = (EditText) findViewById(R.id.endEvento);
-        datIniET = (EditText) findViewById(R.id.txtDataInicio);
-        datFimET = (EditText) findViewById(R.id.txtDataFim);
-        horaIniET = (EditText) findViewById(R.id.txtHoraInicio);
-        horaFimET = (EditText) findViewById(R.id.txtHoraFim);
-
-        datIniET.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                updateDate(1);
-            }
-        });
-
-        datFimET.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                updateDate(2);
-            }
-        });
-
-        horaIniET.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                updateTime(1);
-            }
-        });
-
-        horaFimET.setOnClickListener((new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                updateTime(2);
-            }
-        }));
     }
 
+    /*
     private void updateDate ( int aux ) {
-        year = nCurrentDate.get(Calendar.YEAR);
-        month = nCurrentDate.get(Calendar.MONTH);
-        day = nCurrentDate.get(Calendar.DAY_OF_MONTH);
-        if ( aux == 1 ) {
-            new DatePickerDialog(this, g, year, month, day).show();
-        } else {
-            new DatePickerDialog(this, d, year, month, day).show();
-        }
+
     }
     DatePickerDialog.OnDateSetListener d = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -155,6 +112,8 @@ public class CadastroEventoActivity extends AppCompatActivity {
 
         }
     };
+
+    */
     public void cadastrarEvento (View view) {
 
 
@@ -163,17 +122,20 @@ public class CadastroEventoActivity extends AppCompatActivity {
             String nome = nomeEventoET.getText().toString();
             String descricao = desEventoET.getText().toString();
             String endEvento = endEventoET.getText().toString();
-            String datIni = datIniET.getText().toString();
-            String datFim = datFimET.getText().toString();
-            String horaIni = horaIniET.getText().toString();
-            String horaFim = horaFimET.getText().toString();
+            SimpleDateFormat mdFormat = new SimpleDateFormat("yyyy / MM/ dd");
+            String strDate = mdFormat.format(nCurrentDate.getTime());
 
-            Evento novoEvento = new Evento (nome, descricao,datIni,datFim,horaIni,horaFim,endEvento);
+            SimpleDateFormat mtFormat = new SimpleDateFormat("KK:mm");
+            String strHora = mtFormat.format(nCurrentDate.getTime());
+
+
+
+            Evento novoEvento = new Evento (nome, descricao,endEvento,strDate,strHora);
 
             if(helper.save(novoEvento,"Organizando")) {
-                Toast.makeText(this, "Evento criado!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Evento criado!", Toast.LENGTH_SHORT).show();
                 try {
-                    db.child("Evento").push().setValue(novoEvento);
+                    db.child("Ocorrência").push().setValue(novoEvento);
                 } catch (DatabaseException e) {
                     e.printStackTrace();
                 }
@@ -196,11 +158,7 @@ public class CadastroEventoActivity extends AppCompatActivity {
         boolean retorno = false;
         if (nomeEventoET.getText().toString().trim().equals("") ||
                 desEventoET.getText().toString().trim().equals("") ||
-                endEventoET.getText().toString().trim().equals("") ||
-                datIniET.getText().toString().trim().equals("") ||
-                datFimET.getText().toString().trim().equals("") ||
-                horaIniET.getText().toString().trim().equals("") ||
-                horaFimET.getText().toString().trim().equals("")) {
+                endEventoET.getText().toString().trim().equals("") ) {
             retorno = true;
         }
         return retorno;

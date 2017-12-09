@@ -106,7 +106,7 @@ public class Tab_EventosFragment extends Fragment {
                 //params.putString("horaEndEvento", nTimeEndEditText.getText().toString());
 
 
-                Intent intent = new Intent(getContext(), EventInteresseActivity.class);
+                Intent intent = new Intent(getContext(), EventActivity.class);
                 intent.putExtras(params);
                 startActivity(intent);
             }
