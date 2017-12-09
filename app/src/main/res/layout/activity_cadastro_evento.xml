@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ana.volunteerwork.CadastroEventoActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.ana.trabalhopratico1.MainActivity"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Insira os dados do evento"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="8dp" />
+
+        <TextView
+            android:id="@+id/textViewEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Evento"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+
+
+        <EditText
+            android:id="@+id/nomeEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:inputType="textCapWords"
+            android:hint="Nome do Evento"
+            android:imeOptions="actionNext"
+            />
+
+        <EditText
+            android:id="@+id/desEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:inputType="textCapWords"
+            android:hint="Descrição do Evento"
+            android:imeOptions="actionNext"
+            />
+
+        <EditText
+            android:id="@+id/endEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:inputType="textCapWords"
+            android:hint="Endereço do Evento"
+            android:imeOptions="actionNext"
+            />
+
+
+        <TextView
+            android:id="@+id/textViewDataHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Data/Hora"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp">
+
+            <EditText
+                android:id="@+id/txtDataInicio"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Data Início"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:imeOptions="actionNext"
+                />
+
+            <EditText
+                android:id="@+id/txtHoraInicio"
+                android:textAlignment="center"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Hora Início"
+                android:inputType="time"
+                android:imeOptions="actionNext"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp" >
+
+            <EditText
+                android:id="@+id/txtDataFim"
+                android:textAlignment="center"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+
+                android:layout_margin="8dp"
+                android:ems="10"
+                android:hint="Data Fim "
+                android:inputType="textPersonName"
+
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:imeOptions="actionNext"
+                />
+
+            <EditText
+                android:id="@+id/txtHoraFim"
+                android:textAlignment="center"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Hora Fim"
+                android:inputType="time"
+                android:imeOptions="actionDone"/>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button"
+            android:onClick="cadastrarEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Criar Evento"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

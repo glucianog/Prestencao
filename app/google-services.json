@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "889602274494",
+    "firebase_url": "https://handy-5edb1.firebaseio.com",
+    "project_id": "handy-5edb1",
+    "storage_bucket": "handy-5edb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889602274494:android:36670b72c2a0a047",
+        "android_client_info": {
+          "package_name": "com.example.ana.volunteerwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889602274494-0vrofnaambh3dtetn5c0v2jd9794dpal.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ana.volunteerwork",
+            "certificate_hash": "be5ba40994aae30db30279118633458d58b840fa"
+          }
+        },
+        {
+          "client_id": "889602274494-apotqchdlo3j012n9qj92t52ha7ha8po.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa8hpiX7HcZXrnvXN24k5ugN4NFTnWe4M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889602274494-apotqchdlo3j012n9qj92t52ha7ha8po.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

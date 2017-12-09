@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ana.volunteerwork.EventActivity">
+
+    <TextView
+        android:id="@+id/textViewLabelEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Evento"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewNomeEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/textViewDescricaoEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/textViewHoraEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewEnderecoEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:id="@+id/cadastrarAgenda"
+        android:onClick="cadastrarNaAgenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar na Agenda"
+        android:layout_gravity="center"
+
+        />
+
+    <Button
+        android:id="@+id/enviarLinkedin"
+        android:onClick="enviarLinkedin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compartilhar no Linkedin"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/enviarWpp"
+        android:onClick="enviarWpp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compartilhar no WhatsApp"
+        android:layout_gravity="center"
+        />
+
+
+</LinearLayout>
