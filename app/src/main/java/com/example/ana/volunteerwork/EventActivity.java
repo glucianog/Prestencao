@@ -18,7 +18,7 @@ public class EventActivity extends AppCompatActivity {
     TextView nomeEventoTV;
     TextView desEventoTV;
     TextView endEventoTV;
-    //TextView dataEventoTV;
+    TextView dataEventoTV;
     TextView horaEventoTV;
 
 
@@ -52,6 +52,8 @@ public class EventActivity extends AppCompatActivity {
                 nomeEventoTV.setText(nomeEvento);
                 desEventoTV.setText(desEvento);
                 endEventoTV.setText(endEvento);
+                horaEventoTV.setText(horaEvento);
+                dataEventoTV.setText(dataEvento);
 
             }
         }

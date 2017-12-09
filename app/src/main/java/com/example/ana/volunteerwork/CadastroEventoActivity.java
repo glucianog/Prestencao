@@ -135,7 +135,8 @@ public class CadastroEventoActivity extends AppCompatActivity {
             if(helper.save(novoEvento,"Registros")) {
                 Toast.makeText(this, "Evento criado!", Toast.LENGTH_SHORT).show();
                 try {
-                    db.child("Ocorrências").push().setValue(novoEvento);
+                    db.child("Ocorrencias").push().setValue(novoEvento);
+
                 } catch (DatabaseException e) {
                     Toast.makeText(this, "ERRO NA INSERÇÃO!", Toast.LENGTH_SHORT).show();
 
