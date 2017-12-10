@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,7 +27,7 @@ public class LoginActivity extends AppCompatActivity{
     private EditText emailTxt;
     private EditText passWd;
     private Button logBtn;
-    private TextView signUp;
+    private Button signUp;
     private ProgressDialog progDia;
     private FirebaseAuth mAuth;
 
@@ -45,7 +46,7 @@ public class LoginActivity extends AppCompatActivity{
         emailTxt = (EditText) findViewById(R.id.email);
         passWd = (EditText) findViewById(R.id.senha);
         logBtn = (Button) findViewById(R.id.fazerlogin);
-        signUp = (TextView) findViewById(R.id.cadastrar);
+        signUp = (Button) findViewById(R.id.cadastrar);
 
         logBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +83,7 @@ public class LoginActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 finish();
-                Intent regIntent = new Intent(LoginActivity.this,MainActivity.class);
+                Intent regIntent = new Intent(LoginActivity.this,CadastroActivity.class);
                 startActivity(regIntent);
             }
         });

@@ -8,11 +8,11 @@
             android:title="Mapa" />
         <item
             android:id="@+id/nav_evento"
-            android:icon="@drawable/ic_event"
+            android:icon="@drawable/ic_warning_black_24dp"
             android:title="Ocorrências" />
         <item
             android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_event"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
             android:title="Sair" />
     </group>
 
