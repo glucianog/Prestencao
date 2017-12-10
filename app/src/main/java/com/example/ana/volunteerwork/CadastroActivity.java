@@ -52,7 +52,6 @@ public class CadastroActivity extends AppCompatActivity {
                 String nome = editTextName.getText().toString().trim();
                 String telefone = editTextPhone.getText().toString().trim();
                 String password = editTextPassword.getText().toString().trim();
-
                 if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(nome)|| TextUtils.isEmpty(telefone)){
                     Toast.makeText(CadastroActivity.this, "Favor inserir todos os dados", Toast.LENGTH_LONG).show();
                 }

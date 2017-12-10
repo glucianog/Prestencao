@@ -37,7 +37,7 @@
             android:ems="10"
             android:hint="Nome"
             android:inputType="textPersonName"
-            android:paddingLeft="2dp"
+            android:padding="6dp"
             android:text="teste"
             android:textAlignment="viewStart"
             android:textColor="#00c9da"
@@ -60,13 +60,14 @@
             android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
             android:hint="E-mail"
-            android:textColorHint="#00c9da"
-            android:textColor="#00c9da"
-            android:background="@drawable/edittext_bg"
             android:inputType="textEmailAddress"
-            android:text="tes@tes.com" />
+            android:padding="6dp"
+            android:text="tes@tes.com"
+            android:textColor="#00c9da"
+            android:textColorHint="#00c9da" />
 
 
         <TextView
@@ -86,13 +87,14 @@
             android:id="@+id/telefone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
             android:hint="Telefone"
-            android:textColorHint="#00c9da"
             android:inputType="phone"
-            android:background="@drawable/edittext_bg"
+            android:padding="6dp"
+            android:text="33"
             android:textColor="#00c9da"
-            android:text="33" />
+            android:textColorHint="#00c9da" />
 
 
 
@@ -113,13 +115,14 @@
             android:id="@+id/senha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
             android:hint="Senha"
-            android:textColorHint="#00c9da"
-            android:textColor="#00c9da"
-            android:background="@drawable/edittext_bg"
             android:inputType="textPassword"
-            android:text="123456" />
+            android:padding="6dp"
+            android:text="123456"
+            android:textColor="#00c9da"
+            android:textColorHint="#00c9da" />
 
         <TextView
             android:id="@+id/titulo3"

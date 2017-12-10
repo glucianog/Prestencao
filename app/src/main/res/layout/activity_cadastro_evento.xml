@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#303030"
     tools:context="com.example.ana.volunteerwork.CadastroEventoActivity">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,43 +12,45 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.ana.volunteerwork.MainActivity"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:context="com.example.ana.volunteerwork.MainActivity">
 
         <TextView
             android:id="@+id/titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Insira os dados da Ocorrência"
+            android:layout_margin="8dp"
+            android:text="Insira os dados da ocorrência"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_margin="8dp" />
+            tools:textColor="#00c9da" />
+
 
         <TextView
-            android:id="@+id/textViewEvento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="Ocorrência"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <EditText
             android:id="@+id/nomeEvento"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:inputType="text"
             android:hint="Categoria"
             android:imeOptions="actionNext"
-            />
+            android:inputType="text"
+            android:padding="6dp"
+            android:textColor="#00c9da"
+            android:textColorHint="#00c9da" />
 
         <EditText
             android:id="@+id/desEvento"
@@ -56,11 +59,14 @@
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:inputType="text"
             android:hint="Descrição"
             android:imeOptions="actionNext"
-            />
+            android:inputType="text"
+            android:padding="6dp"
+            android:textColor="#00c9da"
+            android:textColorHint="#00c9da" />
 
         <EditText
             android:id="@+id/endEvento"
@@ -69,22 +75,25 @@
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:inputType="text"
             android:hint="Endereço"
             android:imeOptions="actionNext"
-            />
+            android:inputType="text"
+            android:padding="6dp"
+            android:textColor="#00c9da"
+            android:textColorHint="#00c9da" />
 
 
         <Button
             android:id="@+id/button"
-            android:onClick="cadastrarEvento"
-            android:layout_width="wrap_content"
+            android:layout_width="216dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Registrar Ocorrência"
-            />
+            android:background="@color/colorAccent"
+            android:onClick="cadastrarEvento"
+            android:text=" Registrar Ocorrência " />
 
     </LinearLayout>
 
