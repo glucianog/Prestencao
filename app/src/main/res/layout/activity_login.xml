@@ -34,14 +34,14 @@
             android:layout_height="match_parent"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:textColorHint="#00c9da"
-            android:textColor="#00c9da"
             android:hint="E-mail"
             android:inputType="textPersonName"
-            android:tooltipText="E-mail"
             android:padding="3dp"
+            android:text="t@t.com"
+            android:textColor="#00c9da"
+            android:textColorHint="#00c9da"
 
-            />
+            android:tooltipText="E-mail" />
 
         <TextView
             android:id="@+id/textView"
@@ -56,12 +56,12 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:padding="3dp"
-            android:textColorHint="#00c9da"
-            android:textColor="#00c9da"
             android:hint="Senha"
             android:inputType="textPassword"
-            />
+            android:padding="3dp"
+            android:text="123456"
+            android:textColor="#00c9da"
+            android:textColorHint="#00c9da" />
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"

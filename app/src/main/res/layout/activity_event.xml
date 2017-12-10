@@ -11,13 +11,12 @@
         android:id="@+id/textViewLabelEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="30dp"
         android:text="Evento"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginBottom="15dp"
-        />
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,8 +27,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Motivo:"
-            />
+            android:text="Motivo:" />
+
         <TextView
             android:id="@+id/textViewNomeEvento"
             android:layout_width="wrap_content"
@@ -38,8 +37,7 @@
             android:text="TextView"
             android:textAlignment="viewStart"
             android:textColor="@android:color/black"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -53,8 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Descrição:"
-            />
+            android:text="Descrição:" />
 
 
         <TextView
@@ -81,8 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Data:"
-            />
+            android:text="Data:" />
 
         <TextView
             android:id="@+id/textViewDataEvento"
@@ -108,8 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Hora:"
-            />
+            android:text="Hora:" />
 
         <TextView
             android:id="@+id/textViewHoraEvento"
@@ -135,8 +130,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Local:"
-            />
+            android:text="Local:" />
 
         <TextView
             android:id="@+id/textViewEnderecoEvento"
@@ -153,25 +147,21 @@
     </LinearLayout>
 
 
-
-
     <Button
         android:id="@+id/enviarLinkedin"
-        android:onClick="enviarLinkedin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Compartilhar no Linkedin"
         android:layout_gravity="center"
-        />
+        android:onClick="enviarLinkedin"
+        android:text="Compartilhar no Linkedin" />
 
     <Button
         android:id="@+id/enviarWpp"
-        android:onClick="enviarWpp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Compartilhar no WhatsApp"
         android:layout_gravity="center"
-        />
+        android:onClick="enviarWpp"
+        android:text="Compartilhar no WhatsApp" />
 
 
 </LinearLayout>

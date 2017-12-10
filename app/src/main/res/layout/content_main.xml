@@ -17,9 +17,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />-->
     <FrameLayout
+        android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frame_layout"
-        ></FrameLayout>
+        android:background="#303030"></FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

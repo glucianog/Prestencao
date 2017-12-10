@@ -167,6 +167,9 @@ public class MainActivity extends AppCompatActivity
 
             //FragmentTransaction ft = fragmentManager.beginTransaction().replace(R.id.frame_layout, new EventTransitionFragment()).commit();
         }
+        else if (id == R.id.nav_mmotorista){
+            startActivity(new Intent(this,LoginActivity.class));
+        }
         else if (id == R.id.nav_logout){
             mAuth.signOut();
             finish();

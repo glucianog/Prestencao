@@ -11,6 +11,14 @@
             android:icon="@drawable/ic_warning_black_24dp"
             android:title="Ocorrências" />
         <item
+            android:id="@+id/nav_mmotorista"
+            android:icon="@drawable/ic_directions_car_black_24dp"
+            android:title="Modo Motorista" />
+        <item
+            android:id="@+id/nav_conquistas"
+            android:icon="@drawable/ic_star_black_24dp"
+            android:title="Conquistas" />
+        <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_exit_to_app_black_24dp"
             android:title="Sair" />
