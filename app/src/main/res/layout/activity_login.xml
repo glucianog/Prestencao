@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimaryDark"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ana.volunteerwork.LoginActivity">
@@ -14,7 +15,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="0dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -22,43 +23,73 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="199dp"
-            android:layout_height="164dp"
+            android:layout_width="195dp"
+            android:layout_height="188dp"
             app:srcCompat="@drawable/volunteer_ic" />
+
 
         <EditText
             android:id="@+id/email"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:textColorHint="#00c9da"
             android:hint="E-mail"
             android:inputType="textPersonName"
-            android:tooltipText="E-mail" />
+            android:tooltipText="E-mail"
+            android:padding="3dp"
+
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="" />
 
         <EditText
             android:id="@+id/senha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:padding="3dp"
+            android:textColorHint="#00c9da"
             android:hint="Senha"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="" />
 
-    <Button
-        android:id="@+id/fazerlogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Não possui cadastro?" />
+        <Button
+            android:id="@+id/fazerlogin"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="10dp"
+            android:text="Login" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="#00c9da"
+            android:text="Não possui cadastro?" />
 
         <Button
             android:id="@+id/cadastrar"
-            android:layout_width="wrap_content"
+            android:layout_width="206dp"
             android:layout_height="wrap_content"
-            android:text="Cadastrar" />
+            android:background="@color/colorAccent"
+            android:text="Cadastrar"
+            android:padding="10dp"/>
     </LinearLayout>
 </ScrollView>
