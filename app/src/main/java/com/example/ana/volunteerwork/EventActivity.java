@@ -34,10 +34,10 @@ public class EventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event);
 
         nomeEventoTV = (TextView) findViewById(R.id.textViewNomeEvento);
-        //dataEventoTV = (TextView) findViewById(R.id.textViewDataEvento);
+        dataEventoTV = (TextView) findViewById(R.id.textViewDataEvento);
         horaEventoTV = (TextView) findViewById(R.id.textViewHoraEvento);
-        desEventoTV = (TextView) findViewById(R.id.textViewDescricaoEvento);
-        endEventoTV = (TextView) findViewById(R.id.textViewEnderecoEvento);
+        desEventoTV =  (TextView) findViewById(R.id.textViewDescricaoEvento);
+        endEventoTV =  (TextView) findViewById(R.id.textViewEnderecoEvento);
 
         Intent intent = getIntent();
         if ( intent != null ) {

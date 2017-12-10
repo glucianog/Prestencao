@@ -122,7 +122,7 @@ public class CadastroEventoActivity extends AppCompatActivity {
             String nome = nomeEventoET.getText().toString();
             String descricao = desEventoET.getText().toString();
             String endEvento = endEventoET.getText().toString();
-            SimpleDateFormat mdFormat = new SimpleDateFormat("yyyy / MM/ dd");
+            SimpleDateFormat mdFormat = new SimpleDateFormat("EEE, MMM d, ''yy");
             String strDate = mdFormat.format(nCurrentDate.getTime());
 
             SimpleDateFormat mtFormat = new SimpleDateFormat("KK:mm");
