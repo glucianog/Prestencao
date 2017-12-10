@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimaryDark"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ana.volunteerwork.CadastroActivity">
@@ -13,25 +14,47 @@
         android:gravity="center"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/titulo2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Cadastro"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/titulo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Cadastrar"
+            android:textAlignment="center"
+
+
+
+            android:textColor="#00c9da"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/nome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
             android:hint="Nome"
             android:inputType="textPersonName"
-            android:text="teste" />
+            android:paddingLeft="2dp"
+            android:text="teste"
+            android:textAlignment="viewStart"
+            android:textColor="#00c9da"
+            android:textColorHint="#00c9da" />
+
+        <TextView
+            android:id="@+id/titulo7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text=""
+            android:textAlignment="center"
+
+            android:textColor="#00c9da"
+            android:textSize="2sp"
+            android:textStyle="bold" />
+
 
         <EditText
             android:id="@+id/email"
@@ -39,8 +62,25 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="E-mail"
+            android:textColorHint="#00c9da"
+            android:textColor="#00c9da"
+            android:background="@drawable/edittext_bg"
             android:inputType="textEmailAddress"
             android:text="tes@tes.com" />
+
+
+        <TextView
+            android:id="@+id/titulo4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text=""
+            android:textAlignment="center"
+
+            android:textColor="#00c9da"
+            android:textSize="2sp"
+            android:textStyle="bold" />
+
 
         <EditText
             android:id="@+id/telefone"
@@ -48,8 +88,26 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Telefone"
+            android:textColorHint="#00c9da"
             android:inputType="phone"
+            android:background="@drawable/edittext_bg"
+            android:textColor="#00c9da"
             android:text="33" />
+
+
+
+        <TextView
+            android:id="@+id/titulo5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text=""
+            android:textAlignment="center"
+
+            android:textColor="#00c9da"
+            android:textSize="2sp"
+            android:textStyle="bold" />
+
 
         <EditText
             android:id="@+id/senha"
@@ -57,13 +115,30 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Senha"
+            android:textColorHint="#00c9da"
+            android:textColor="#00c9da"
+            android:background="@drawable/edittext_bg"
             android:inputType="textPassword"
             android:text="123456" />
 
+        <TextView
+            android:id="@+id/titulo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text=""
+            android:textAlignment="center"
+
+            android:textColor="#00c9da"
+            android:textSize="2sp"
+            android:textStyle="bold" />
+
+
         <Button
             android:id="@+id/cadastrar"
-            android:layout_width="wrap_content"
+            android:layout_width="216dp"
             android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
             android:text="Cadastrar" />
 
     </LinearLayout>
