@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.ana.volunteerwork.database.Evento;
+import com.facebook.share.model.ShareOpenGraphAction;
+import com.facebook.share.model.ShareOpenGraphContent;
+import com.facebook.share.model.ShareOpenGraphObject;
+import com.facebook.share.widget.ShareDialog;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -64,6 +68,23 @@ public class EventActivity extends AppCompatActivity {
     public void enviarFacebook ( View view ) {
         String mensagem = "";
         mensagem = nomeEvento + ", " + horaEvento + ", " + dataEvento + ", " + endEvento;
+        ShareOpenGraphObject object = new ShareOpenGraphObject.Builder()
+                .putString("og:type","books.book")
+                .putString("og:title","Alerta!!!")
+                .putString("og:description",mensagem)
+                .build();
+
+        ShareOpenGraphAction action = new ShareOpenGraphAction.Builder()
+                .setActionType("books.reads")
+                .putObject("book",object)
+                .build();
+
+        ShareOpenGraphContent content = new ShareOpenGraphContent.Builder()
+                .setPreviewPropertyName("book")
+                .setAction(action)
+                .build();
+
+        ShareDialog.show(this,content);
     }
 
 

@@ -10,4 +10,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
     <string name="partcipar_do_evento">Partcipar do Evento</string>
+    <string name="facebook_app_id">153144982113918</string>
 </resources>
