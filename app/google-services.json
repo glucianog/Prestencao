@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "344564662670-pivae4oa1r4p46g58kr7lah1c0vtka5k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ana.volunteerwork",
+            "certificate_hash": "92e4b2672d6f3c731dcf938b53d55d4f70891cb7"
+          }
+        },
+        {
           "client_id": "344564662670-kan5n61rf5i22o9nl8knl6bn72dvuab5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
