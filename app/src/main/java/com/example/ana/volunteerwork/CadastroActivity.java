@@ -43,6 +43,8 @@ public class CadastroActivity extends AppCompatActivity {
         editTextPhone = (EditText) findViewById(R.id.telefone);
         editTextName = (EditText) findViewById(R.id.nome);
         cadastrar = (Button) findViewById(R.id.cadastrar);
+        progressDialog = new ProgressDialog(this);
+
 
 
         cadastrar.setOnClickListener(new View.OnClickListener() {
@@ -56,26 +58,42 @@ public class CadastroActivity extends AppCompatActivity {
                     Toast.makeText(CadastroActivity.this, "Favor inserir todos os dados", Toast.LENGTH_LONG).show();
                 }
                 else {
-                    firebaseAuth.createUserWithEmailAndPassword(email, password)
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    progressDialog.dismiss();
-                                    if(task.isSuccessful()){
-                                        finish();
-                                        Intent mainArea = new Intent(CadastroActivity.this,MainActivity.class);
-                                        startActivity(mainArea);
-
-                                        Toast.makeText(CadastroActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                                    }else{
-
-                                        Toast.makeText(CadastroActivity.this, "Registration Error", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
+                    registerUser();
                 }
             }
         });
+    }
+
+    public void registerUser() {
+        String email = editTextEmail.getText().toString().trim();
+        String pw    = editTextPassword.getText().toString().trim();
+
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        if(TextUtils.isEmpty(email)) {
+            Toast.makeText(this, "Favor inserir e-mail!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(TextUtils.isEmpty(pw)) {
+            Toast.makeText(this, "Favor inserir senha!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        progressDialog.setMessage("Registrando Usuário...");
+        progressDialog.show();
+
+        firebaseAuth.createUserWithEmailAndPassword(email,pw)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()) {
+                            Toast.makeText(CadastroActivity.this, "Usuário Registrado!", Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
+                            finish();
+                        }
+                    }
+                });
+
     }
 
 }
