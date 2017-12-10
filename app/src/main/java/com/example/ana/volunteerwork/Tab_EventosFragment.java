@@ -58,7 +58,7 @@ public class Tab_EventosFragment extends Fragment {
         db = FirebaseDatabase.getInstance().getReference();
         helper = new Database(db);
 
-        db.child("Evento").addValueEventListener(new ValueEventListener() {
+        db.child("Ocorrencias").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterable<DataSnapshot> children = dataSnapshot.getChildren();

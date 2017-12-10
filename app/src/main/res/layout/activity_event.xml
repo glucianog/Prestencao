@@ -19,50 +19,141 @@
         android:layout_marginBottom="15dp"
         />
 
-    <TextView
-        android:id="@+id/textViewNomeEvento"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motivo:"
+            />
+        <TextView
+            android:id="@+id/textViewNomeEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:text="TextView"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:text="TextView"
-        android:textAlignment="viewStart"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        />
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
 
-    <TextView
-        android:id="@+id/textViewDescricaoEvento"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Descrição:"
+            />
+
+
+        <TextView
+            android:id="@+id/textViewDescricaoEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textAlignment="textStart"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
 
 
-    <TextView
-        android:id="@+id/textViewHoraEvento"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Data:"
+            />
+
+        <TextView
+            android:id="@+id/textViewDataEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textAlignment="textStart"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
+        android:orientation="horizontal"
+        android:padding="15dp">
 
-    <TextView
-        android:id="@+id/textViewEnderecoEvento"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Hora:"
+            />
+
+        <TextView
+            android:id="@+id/textViewHoraEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textAlignment="textStart"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Local:"
+            />
+
+        <TextView
+            android:id="@+id/textViewEnderecoEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+
 
     <Button
         android:id="@+id/enviarLinkedin"

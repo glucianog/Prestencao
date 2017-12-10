@@ -122,7 +122,7 @@ public class CadastroEventoActivity extends AppCompatActivity {
             String nome = nomeEventoET.getText().toString();
             String descricao = desEventoET.getText().toString();
             String endEvento = endEventoET.getText().toString();
-            SimpleDateFormat mdFormat = new SimpleDateFormat("yyyy / MM/ dd");
+            SimpleDateFormat mdFormat = new SimpleDateFormat("EEE, MMM d, ''yy");
             String strDate = mdFormat.format(nCurrentDate.getTime());
 
             SimpleDateFormat mtFormat = new SimpleDateFormat("KK:mm");
@@ -135,7 +135,8 @@ public class CadastroEventoActivity extends AppCompatActivity {
             if(helper.save(novoEvento,"Registros")) {
                 Toast.makeText(this, "Evento criado!", Toast.LENGTH_SHORT).show();
                 try {
-                    db.child("Ocorrências").push().setValue(novoEvento);
+                    db.child("Ocorrencias").push().setValue(novoEvento);
+
                 } catch (DatabaseException e) {
                     Toast.makeText(this, "ERRO NA INSERÇÃO!", Toast.LENGTH_SHORT).show();
 

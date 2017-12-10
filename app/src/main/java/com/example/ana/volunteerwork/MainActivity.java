@@ -1,5 +1,6 @@
 package com.example.ana.volunteerwork;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.ana.volunteerwork.database.Database;
 import com.example.ana.volunteerwork.database.Evento;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +31,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private FirebaseAuth mAuth;
     FragmentManager fragmentManager;
     Database helper;
     final static ArrayList<Evento> eventos = new ArrayList<>();
@@ -40,6 +43,16 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // verifica login
+        mAuth = FirebaseAuth.getInstance();
+        //Log.d("oi", mAuth.getCurrentUser().getEmail().toString());
+
+        if(mAuth.getCurrentUser() == null){
+            Intent mainArea = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(mainArea);
+        }
+
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
