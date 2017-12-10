@@ -35,6 +35,7 @@
             android:background="@drawable/edittext_bg"
             android:ems="10"
             android:textColorHint="#00c9da"
+            android:textColor="#00c9da"
             android:hint="E-mail"
             android:inputType="textPersonName"
             android:tooltipText="E-mail"
@@ -57,6 +58,7 @@
             android:ems="10"
             android:padding="3dp"
             android:textColorHint="#00c9da"
+            android:textColor="#00c9da"
             android:hint="Senha"
             android:inputType="textPassword"
             />
