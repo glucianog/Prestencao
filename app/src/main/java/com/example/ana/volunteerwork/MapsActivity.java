@@ -23,6 +23,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -71,11 +74,12 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterable<DataSnapshot> children = dataSnapshot.getChildren();
-                for(DataSnapshot child : children) {
+                for (DataSnapshot child : children) {
                     Evento t = child.getValue(Evento.class);
                     listaDeEventos.add(t);
                 }
             }
+
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
@@ -108,7 +112,6 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
 
         locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
         locationManager.removeUpdates(this);
-
 
 
     }
@@ -145,7 +148,7 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
                         //if (enderecos.size() > 0) {
 
                         LatLng nova = new LatLng(enderecos.get(0).getLatitude(), enderecos.get(0).getLongitude());
-                        marker = new MarkerOptions();
+                        marker = new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.atencao_v));
                         marker.position(nova);
                         marker.title(evento.getEndereco());
                         mMap.addMarker(marker);
@@ -158,7 +161,12 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
                         Log.d("TESTE", "PASSEI AQUUIIII AAFFFFFF");
                     }
                 }
-                //Log.d("TESTE",listaDeEventos.toString());
+//
+//                Location myLocation = mMap.getMyLocation();
+//                LatLng myLatLng = new LatLng(myLocation.getLatitude(),myLocation.getLongitude());
+//                CameraPosition myPosition = new CameraPosition().Builder()
+//                        .target(myLatLng).zoom(17).bearing(90).tilt(30).build();
+//                //Log.d("TESTE",listaDeEventos.toString());
                 /*for ( int i = 0; i < listaDeEventos.size(); i ++ ) {
 
                     try {
@@ -180,6 +188,7 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
                     }
 
                 }*/
+
             }
 
             @Override
@@ -283,6 +292,9 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
     @Override
     public void onLocationChanged(Location location) {
         //Toast.makeText(getActivity(), "Posição Alterada", Toast.LENGTH_SHORT).show();
+        if(mMap != null ) {
+
+        }
     }
 
     @Override
@@ -340,4 +352,5 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
             System.out.println(msg);
         }
     }
+
 }

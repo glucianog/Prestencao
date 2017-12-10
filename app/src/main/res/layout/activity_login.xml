@@ -38,7 +38,6 @@
             android:textColor="#00c9da"
             android:hint="E-mail"
             android:inputType="textPersonName"
-<<<<<<< Updated upstream
             android:tooltipText="E-mail"
             android:padding="3dp"
 
@@ -50,10 +49,6 @@
             android:layout_height="wrap_content"
             android:padding="3dp"
             android:text="" />
-=======
-            android:text="t@t.com"
-            android:tooltipText="E-mail" />
->>>>>>> Stashed changes
 
         <EditText
             android:id="@+id/senha"
@@ -66,7 +61,6 @@
             android:textColor="#00c9da"
             android:hint="Senha"
             android:inputType="textPassword"
-<<<<<<< Updated upstream
             />
         <TextView
             android:id="@+id/textView3"
@@ -74,12 +68,6 @@
             android:layout_height="wrap_content"
             android:padding="3dp"
             android:text="" />
-=======
-            android:text="123456" />
->>>>>>> Stashed changes
-
-
-<<<<<<< Updated upstream
         <Button
             android:id="@+id/fazerlogin"
             android:layout_width="208dp"
@@ -95,33 +83,15 @@
             android:padding="10dp"
             android:textColor="#00c9da"
             android:text="Não possui cadastro?" />
-=======
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Não possui cadastro?" />
->>>>>>> Stashed changes
 
         <Button
             android:id="@+id/cadastrar"
             android:layout_width="206dp"
             android:layout_height="wrap_content"
-<<<<<<< Updated upstream
             android:background="@color/colorAccent"
             android:text="Cadastrar"
             android:padding="10dp"/>
-=======
-            android:text="Cadastrar"
-            tools:context="com.example.ana.volunteerwork.CadastroActivity" />
->>>>>>> Stashed changes
+
+
     </LinearLayout>
 </ScrollView>
