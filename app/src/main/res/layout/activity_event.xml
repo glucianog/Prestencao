@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#303030"
+    tools:textColor="#00c9da"
     android:orientation="vertical"
     tools:context="com.example.ana.volunteerwork.EventActivity">
 
@@ -16,8 +17,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="30dp"
         android:text="Ocorrência"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="24sp"
         tools:textColor="#00c9da" />
 
     <LinearLayout
@@ -39,7 +39,6 @@
             android:layout_marginLeft="15dp"
             android:text="TextView"
             android:textAlignment="viewStart"
-            android:textColor="@android:color/black"
             android:textSize="16sp"
             tools:textColor="#00c9da" />
 
@@ -67,9 +66,8 @@
             android:layout_marginTop="8dp"
             android:text="TextView"
             android:textAlignment="textStart"
-            android:textColor="@android:color/black"
             android:textSize="16sp"
-            tools:textColor="#FFFFFF" />
+            tools:textColor="#00c9da" />
 
     </LinearLayout>
 
@@ -78,11 +76,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingLeft="15dp">
+
         <TextView
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_marginTop="8dp"
-            android:text="Data:" />
+            android:text="Data:"
+            tools:textColor="#00c9da" />
+
         <TextView
             android:id="@+id/textViewDataEvento"
             android:layout_width="wrap_content"
@@ -91,8 +92,8 @@
             android:layout_marginTop="8dp"
             android:text="TextView"
             android:textAlignment="textStart"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:textColor="#00c9da" />
     </LinearLayout>
 
     <LinearLayout
@@ -104,7 +105,8 @@
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_marginTop="8dp"
-            android:text="Hora:" />
+            android:text="Hora:"
+            tools:textColor="#00c9da" />
         <TextView
             android:id="@+id/textViewHoraEvento"
             android:layout_width="wrap_content"
@@ -113,8 +115,8 @@
             android:layout_marginTop="8dp"
             android:text="TextView"
             android:textAlignment="textStart"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:textColor="#00c9da" />
     </LinearLayout>
 
     <LinearLayout
@@ -122,11 +124,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingLeft="15dp">
+
         <TextView
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_marginTop="8dp"
-            android:text="Local:" />
+            android:text="Local:"
+            tools:textColor="#00c9da" />
 
         <TextView
             android:id="@+id/textViewEnderecoEvento"
@@ -136,8 +140,8 @@
             android:layout_marginTop="8dp"
             android:text="TextView"
             android:textAlignment="textStart"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:textColor="#00c9da" />
 
 
     </LinearLayout>
@@ -153,9 +157,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:onClick="enviarFacebook"
-            android:text="Compartilhar no Linkedin"
+            android:text="Compartilhar no Facebook"
             android:background="@drawable/ic_facebook_48"
-            android:layout_marginRight="15dp"/>
+            android:layout_marginRight="15dp"
+            tools:textColor="#00c9da" />
 
         <ImageButton
             android:id="@+id/enviarWpp"
@@ -164,7 +169,8 @@
             android:layout_gravity="center"
             android:onClick="enviarWpp"
             android:text="Compartilhar no WhatsApp"
-            android:background="@drawable/ic_whatsapp_48"/>
+            android:background="@drawable/ic_whatsapp_48"
+            tools:textColor="#00c9da" />
 
 
 
