@@ -79,7 +79,7 @@ public class EventTransitionFragment extends Fragment {
         public ViewPagerAdapter (FragmentManager fragmentManager) {
             super (fragmentManager);
         }
-        String [] tituloTabs= {"Feitos por Mim", "Ocorrências"};
+        String [] tituloTabs= {"Minhas Contribuições", "Ocorrências"};
 
         @Override
         public Fragment getItem(int position) {

@@ -61,17 +61,12 @@ public class EventActivity extends AppCompatActivity {
     }
 
 
-    public void enviarLinkedin ( View view ) {
-        String mensagem= "";
-        Intent intent = ShareCompat.IntentBuilder.from(EventActivity.this).setType("text/plain")
-                .setText(mensagem).getIntent();
-        intent.setPackage("com.linkedin.android");
-        intent.setAction(Intent.ACTION_SEND);
-        if ( intent.resolveActivity(getPackageManager()) != null ) {
-            startActivity(intent);
-        }
-
+    public void enviarFacebook ( View view ) {
+        String mensagem = "";
+        mensagem = nomeEvento + ", " + horaEvento + ", " + dataEvento + ", " + endEvento;
     }
+
+
 
     public void enviarWpp ( View view) {
         String mensagem = "Fique Atento! Ocorreu um acidente na" + endEvento + ", às " + horaEvento;

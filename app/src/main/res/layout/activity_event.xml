@@ -14,7 +14,7 @@
         android:layout_marginBottom="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="30dp"
-        android:text="Evento"
+        android:text="Ocorrência"
         android:textColor="@android:color/black"
         android:textSize="20sp" />
 
@@ -152,7 +152,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:onClick="enviarLinkedin"
+        android:onClick="enviarFacebook"
         android:text="Compartilhar no Linkedin" />
 
     <Button
@@ -163,5 +163,7 @@
         android:onClick="enviarWpp"
         android:text="Compartilhar no WhatsApp" />
 
-
 </LinearLayout>
+
+
+

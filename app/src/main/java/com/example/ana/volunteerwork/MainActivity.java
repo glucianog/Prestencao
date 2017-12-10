@@ -166,11 +166,20 @@ public class MainActivity extends AppCompatActivity
             ft.commit();
 
             //FragmentTransaction ft = fragmentManager.beginTransaction().replace(R.id.frame_layout, new EventTransitionFragment()).commit();
-        }
-        else if (id == R.id.nav_mmotorista){
+        } else if (id == R.id.nav_mmotorista){
             startActivity(new Intent(this,LoginActivity.class));
-        }
-        else if (id == R.id.nav_logout){
+        } else if (id == R.id.nav_conquistas){
+            FragmentTransaction ft = fragmentManager.beginTransaction();//.replace(R.id.coordinator_layout, new TransitionFragment()).commit();
+            Bundle args = new Bundle();
+            //args.putParcelableArrayList("list", (ArrayList<? extends Parcelable>) eventos);
+            //args.putString("subjectName",item.getTitle().toString());
+            ConquistaFragment fragment = new ConquistaFragment();
+            //fragment.setArguments(args);
+            ft.replace(R.id.frame_layout, fragment);
+            ft.commit();
+
+
+        } else if (id == R.id.nav_logout) {
             mAuth.signOut();
             finish();
             startActivity(new Intent(this,LoginActivity.class));
