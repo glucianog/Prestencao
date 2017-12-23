@@ -150,7 +150,7 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
                         LatLng nova = new LatLng(enderecos.get(0).getLatitude(), enderecos.get(0).getLongitude());
                         marker = new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.atencao_v));
                         marker.position(nova);
-                        marker.title(evento.getEndereco());
+                        marker.title(evento.getNome());
                         mMap.addMarker(marker);
                         mMap.moveCamera(CameraUpdateFactory.newLatLng(nova));
 
